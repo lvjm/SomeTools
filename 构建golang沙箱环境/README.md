@@ -21,6 +21,7 @@ Step 4/4 : RUN go run ./hello/main.go
 Removing intermediate container a0670931753a
  ---> c9a31af1b698
 Successfully built c9a31af1b698
-Successfully tagged maylv:latest
+Successfully tagged may:latest
 
 ```
+#### 注意目录是从src下面开始
