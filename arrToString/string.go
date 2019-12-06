@@ -16,9 +16,12 @@ func main() {
 	fmt.Println("strWithComma ----->", strWithComma)
 	str := ArrToStr(ids)
 	fmt.Println("str ----->", str)
+	// 截取字符串
 	subStr := str[0 : len(str)-1]
 	fmt.Println("subStr ----->", subStr)
-
+	// 删除第二个元素
+	removeIds := RemoveIndex(ids, 1)
+	fmt.Println("removeIds ----->", removeIds)
 }
 
 // ArrToString 将int数组转为string数组
@@ -39,6 +42,11 @@ func ArrToStr(intArr []int) string {
 	return str
 }
 
+// RemoveIndex 删除指定元素
+func RemoveIndex(s []int, index int) []int {
+	return append(s[:index], s[index+1:]...)
+}
+
 // 运行结果
 /*
 	ids-----> [1 2 3 4]
@@ -46,4 +54,5 @@ func ArrToStr(intArr []int) string {
 	strWithComma -----> 1,2,3,4
 	str -----> 1234
 	subStr -----> 123
+	removeIds -----> [1 3 4]
 */
